@@ -55,9 +55,15 @@ footer {
 }
 
 :focus {
-  outline: thick dotted;
+  outline: thick groove;
 }
 
-:hover { 
-  text-decoration-style: double;  
+:hover,
+[href^="#"] {
+  text-decoration-style: dotted;
 }
+
+[href^="#"]:hover {
+  text-decoration-style: solid;
+}
+
