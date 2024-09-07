@@ -9,31 +9,55 @@ body {
   overflow-wrap: anywhere;
 }
 
-a {
-  border-radius: 100%;
-  font-size: max(2rem, var(--vol) * 1.618rem);
-  display: inline-flex;
-  text-decoration-line: line-through;
-}
-
-nav {
-  align-items: center;
+article {
+  align-items: flex-start;
   box-sizing: border-box;
   contain: layout;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-end;
+  flex-flow: column;
+  justify-content: flex-start;
   margin: auto;
-  margin-right: 10vw;
   min-height: 100vh;  
   padding: 20vh 10vw;
 }
 
-:nth-child(1n) { --vol: 1 }
-:nth-child(2n) { --vol: 1.618 }
-:nth-child(3n) { --vol: 2.618 }
-:nth-child(odd) { text-decoration-style: double }
-:nth-child(even) { text-decoration-style: dotted }
-:focus { text-decoration-style: solid }
-:hover { text-decoration-style: wavy }
-:target a { transform: rotate(99deg) }
+h1 {
+  font-size: 2.618rem;
+  margin: auto;
+  padding: 1ch; 
+}
+
+em {
+  font: unset;
+}
+  
+@media (orientation: portrait) {
+  h1 {
+    writing-mode: vertical-rl;
+  }
+}
+
+p {
+  box-sizing: border-box;
+  margin-block: 0;
+  margin-inline-end: auto;
+  padding: 1ch;
+}
+
+hr {
+  all: unset;
+  display: block;  
+  margin-block: 1em;
+}
+
+footer {
+  margin-block: 5em 1em;
+}
+
+:focus {
+  outline: thick dotted;
+}
+
+:hover { 
+  text-decoration-style: double;  
+}
