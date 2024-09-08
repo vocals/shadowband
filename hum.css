@@ -25,6 +25,7 @@ article {
 }
 
 aside { 
+  align-items: flex-start;
   contain: layout;
   display: flex;
   flex-flow: column;
@@ -33,7 +34,7 @@ aside {
 }
 
 footer {
-  margin-block: 5em 1em;
+  margin-block: 3em 1em;
 }
 
 nav {
@@ -50,7 +51,7 @@ p {
 
 h1 {
   font-size: 2.618rem;
-  margin: 1em auto 1ex;
+  margin: auto auto 1ex;
 }
 
 hr {
